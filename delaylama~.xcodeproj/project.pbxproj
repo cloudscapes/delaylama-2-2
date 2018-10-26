@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		07FBAFFB1CC1330200CCCCD8 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FBAFFA1CC1330200CCCCD8 /* MaxAudioAPI.framework */; };
 		613C10BC212B2ADF00BA5C21 /* delaylama.c in Sources */ = {isa = PBXBuildFile; fileRef = 613C10BB212B2ADF00BA5C21 /* delaylama.c */; };
+		61E71E90218356B5008AF51B /* delaylama_utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E71E8F218356B5008AF51B /* delaylama_utility.h */; };
+		61E71E9221835971008AF51B /* mystruct.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E71E9121835971008AF51B /* mystruct.h */; };
+		61E71E96218368AD008AF51B /* delaylama_new.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71E95218368AD008AF51B /* delaylama_new.c */; };
+		61E71E9821836977008AF51B /* delaylama_class.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E71E9721836977008AF51B /* delaylama_class.h */; };
+		61E71E9E218372AC008AF51B /* delaylama_free.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71E9D218372AC008AF51B /* delaylama_free.c */; };
+		61E71EA02183730C008AF51B /* delaylama_assist.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71E9F2183730C008AF51B /* delaylama_assist.c */; };
+		61E71EA221837356008AF51B /* delaylama_perform64.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71EA121837356008AF51B /* delaylama_perform64.c */; };
+		61E71EA4218373F5008AF51B /* delaylama_float.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71EA3218373F5008AF51B /* delaylama_float.c */; };
+		61E71EA621837440008AF51B /* delaylama_dsp64.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E71EA521837440008AF51B /* delaylama_dsp64.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +25,15 @@
 		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../../maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* delaylama~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "delaylama~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		613C10BB212B2ADF00BA5C21 /* delaylama.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama.c; sourceTree = "<group>"; };
+		61E71E8F218356B5008AF51B /* delaylama_utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delaylama_utility.h; sourceTree = "<group>"; };
+		61E71E9121835971008AF51B /* mystruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mystruct.h; sourceTree = "<group>"; };
+		61E71E95218368AD008AF51B /* delaylama_new.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_new.c; sourceTree = "<group>"; };
+		61E71E9721836977008AF51B /* delaylama_class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delaylama_class.h; sourceTree = "<group>"; };
+		61E71E9D218372AC008AF51B /* delaylama_free.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_free.c; sourceTree = "<group>"; };
+		61E71E9F2183730C008AF51B /* delaylama_assist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_assist.c; sourceTree = "<group>"; };
+		61E71EA121837356008AF51B /* delaylama_perform64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_perform64.c; sourceTree = "<group>"; };
+		61E71EA3218373F5008AF51B /* delaylama_float.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_float.c; sourceTree = "<group>"; };
+		61E71EA521837440008AF51B /* delaylama_dsp64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delaylama_dsp64.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +51,16 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
+				61E71E8F218356B5008AF51B /* delaylama_utility.h */,
+				61E71E9121835971008AF51B /* mystruct.h */,
 				613C10BB212B2ADF00BA5C21 /* delaylama.c */,
+				61E71E9721836977008AF51B /* delaylama_class.h */,
+				61E71E95218368AD008AF51B /* delaylama_new.c */,
+				61E71EA521837440008AF51B /* delaylama_dsp64.c */,
+				61E71EA3218373F5008AF51B /* delaylama_float.c */,
+				61E71EA121837356008AF51B /* delaylama_perform64.c */,
+				61E71E9F2183730C008AF51B /* delaylama_assist.c */,
+				61E71E9D218372AC008AF51B /* delaylama_free.c */,
 				22CF10220EE984600054F513 /* maxmspsdk.xcconfig */,
 				07FBAFFA1CC1330200CCCCD8 /* MaxAudioAPI.framework */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
@@ -56,6 +83,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E71E90218356B5008AF51B /* delaylama_utility.h in Headers */,
+				61E71E9221835971008AF51B /* mystruct.h in Headers */,
+				61E71E9821836977008AF51B /* delaylama_class.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E71EA621837440008AF51B /* delaylama_dsp64.c in Sources */,
+				61E71E9E218372AC008AF51B /* delaylama_free.c in Sources */,
 				613C10BC212B2ADF00BA5C21 /* delaylama.c in Sources */,
+				61E71E96218368AD008AF51B /* delaylama_new.c in Sources */,
+				61E71EA221837356008AF51B /* delaylama_perform64.c in Sources */,
+				61E71EA02183730C008AF51B /* delaylama_assist.c in Sources */,
+				61E71EA4218373F5008AF51B /* delaylama_float.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
