@@ -2,10 +2,14 @@
 //  delaylama_free.c
 //  max-external
 //
-//  Created by Tom     Berkmann 375851,
-//  Olivier Faure  Brac 382122,
-//  Hamed   Habibi Fard  385540, on 10/26/18.
-//
+/**
+ *  @author Tom     Berkmann    375851,<br>
+ *  @author Olivier Faure  Brac 382122,<br>
+ *  @author Hamed   Habibi Fard 385540,<br>
+ *  @date   10/26/18.<br>
+ *  @brief  Frees a delaylama obkject <br>
+ *  @param  x
+ */
 
 #include "ext.h"  // must be included first
 #include "z_dsp.h"

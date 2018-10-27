@@ -2,12 +2,45 @@
 //  delaylama_perform64.c
 //  max-external
 //
-//  Created by Tom     Berkmann 375851,
-//  Olivier Faure  Brac 382122,
-//  Hamed   Habibi Fard  385540, on 10/26/18.
-//
+/**
+ *  @author Tom     Berkmann    375851,<br>
+ *  @author Olivier Faure  Brac 382122,<br>
+ *  @author Hamed   Habibi Fard 385540,<br>
+ *  @date   10/26/18.<br>
+ *  @brief  The Performance Routine, works only with MAX/MSP 6 and 7 <br>
+ *  @param x
+ *  @param dsp64
+ *  @param ins
+ *  @param numins
+ *  @param outs
+ *  @param numouts
+ *  @param n
+ *  @param flags
+ *  @param userparam
+ *  @var   input
+ *  @var   delaytime
+ *  @var   feedback
+ *  @var   output
+ *  @var   sr
+ *  @var   delay_line
+ *  @var   read_ptr
+ *  @var   write_ptr
+ *  @var   delay_length_as_samples
+ *  @var   end_of_memory
+ *  @var   delaytime_connected
+ *  @var   feedback_connected
+ *  @var   delaytime_float
+ *  @var   fractional_difference
+ *  @var   frac_delay
+ *  @var   samp1
+ *  @var   samp2
+ *  @var   int_delay
+ *  @var   samp_rate_seconds
+ *  @var   output_sample
+ *  @var   feedback_sample
+ */
 
-#include "ext.h"  // must be included first
+#include "ext.h"  /** must be included first */
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include <stdio.h>
@@ -16,32 +49,28 @@
 #include "delaylama_utility.h"
 
 
-/* The 64 bit perform routine
- 
- Works only with MAX/MSP 6 and 7
- 
- */
+
 
 void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
                          long numins, double **outs,long numouts, long n,
                          long flags, void *userparam)
 {
-    /* first inlet from left is our signal input */
+    /** first inlet from left is our signal input */
     
     t_double *input = (t_double *) ins[0];
     
-    /* second inlet from left is our delay time */
+    /** second inlet from left is our delay time */
     
     t_double *delaytime = (t_double *) ins[1];
     
-    /* third inlet from left is our feedback factor */
+    /** third inlet from left is our feedback factor */
     
     t_double *feedback = (t_double *) ins[2];
     
-    /* our external has only one ouptput */
+    /** our external has only one ouptput */
     t_double *output = (t_double *) outs[0];
     
-    /* assigning the needed variables from the object structure into local variables
+    /** assigning the needed variables from the object structure into local variables
      cause it's more efficient to use local variables rather than pull them off of the
      object structure every single time they are needed!
      */
@@ -51,7 +80,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
     float  *write_ptr = x->write_ptr;
     long delay_length_as_samples = x->delay_length_as_samples;
     
-    /* the address of the beginning of the delay line plus the number of samples in the
+    /** the address of the beginning of the delay line plus the number of samples in the
      the delay line multiplied by the size of float.So end_of_memory will point to
      one slot beyond the last float in the delay line memory
      */
@@ -62,10 +91,10 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
     
     float delaytime_float = x->delay_time;
     float feedback_float = x->feedback;
-    /* fractional difference used for our simple linear interpolation */
+    /** fractional difference used for our simple linear interpolation */
     float fractional_difference;
     float frac_delay;
-    /* samp1 & samp2 are used for linear interpolation and are taken from our delay line */
+    /** samp1 & samp2 are used for linear interpolation and are taken from our delay line */
     float samp1;
     float samp2;
     long int_delay;
@@ -74,7 +103,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
     float feedback_sample;
     
     
-    /*
+    /**
      From here on we choose the correct DSP configuration based on which inlets are
      connected and which of them aren't.
      
@@ -93,7 +122,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
      */
     
     
-    /* By truncating the actual delay time and subtract the truncated delay time
+    /** By truncating the actual delay time and subtract the truncated delay time
      from the actual delay time we get a fraction. We can use this fraction to determine
      the relative contribution of two samples, the first one at the truncated delay time slot
      and the second sample will be taken one slot beyond the first delay time slot. But why
@@ -123,7 +152,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
                 read_ptr += delay_length_as_samples;
             }
             
-            /* here the first sample is taken for linear interpolation */
+            /** here the first sample is taken for linear interpolation */
             samp1 = *read_ptr++;
             /* if our read pointer has reached beyond the end of the delay line
              it is set to the beginning of the delay line
@@ -131,7 +160,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
             if(read_ptr == end_of_memory){
                 read_ptr = delay_line;
             }
-            /* here the second sample is taken for our linear interpolation */
+            /** here the second sample is taken for our linear interpolation */
             samp2 = *read_ptr;
             
             output_sample = samp1 + fractional_difference * (samp2-samp1);
@@ -140,12 +169,12 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
             if(fabs(feedback_sample)  < 0.0000001){
                 feedback_sample = 0.0;
             }
-            /* here the input sample plus feedback is written to the current write location
+            /** here the input sample plus feedback is written to the current write location
              on the delay line
              */
             *write_ptr++ = *input++ + feedback_sample;
             
-            /* the output sample is written to the output signal vector
+            /** the output sample is written to the output signal vector
              & the write pointer is incremented
              */
             *output++ = output_sample;
@@ -163,14 +192,14 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
     
     else if(delaytime_connected){
         
-        /* while there's still some input coming */
+        /** while there's still some input coming */
         while(n--){
             frac_delay = *delaytime++ * samp_rate_seconds;
-            /* if the fractional_differenceal delay is less than zero, set it to a default*/
+            /** if the fractional_differenceal delay is less than zero, set it to a default */
             if(frac_delay < 0){
                 frac_delay = 0.;
             }
-            /* if the fractional delay goes over the range, bring it back! */
+            /** if the fractional delay goes over the range, bring it back! */
             else if(frac_delay >= delay_length_as_samples) {
                 frac_delay = delay_length_as_samples - 1;
             }
@@ -181,12 +210,12 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
             while(read_ptr < delay_line){
                 read_ptr += delay_length_as_samples;
             }
-            /* here the first sample is taken for linear interpolation */
+            /** here the first sample is taken for linear interpolation */
             samp1 = *read_ptr++;
             if(read_ptr == end_of_memory){
                 read_ptr = delay_line;
             }
-            /* here the second sample is taken for our linear interpolation */
+            /** here the second sample is taken for our linear interpolation */
             samp2 = *read_ptr;
             output_sample = samp1 + fractional_difference * (samp2-samp1);
             feedback_sample = output_sample * feedback_float;
@@ -271,7 +300,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
             output_sample = samp1 + fractional_difference * (samp2-samp1);
             feedback_sample = output_sample * feedback_float;
             
-            // some sanity checking incase the user types garbage
+            /* some sanity checking incase the user types garbage */
             if(fabs(feedback_sample) < 0.0000001){
                 feedback_sample = 0.0;
             }
@@ -284,7 +313,7 @@ void delaylama_perform64(t_delaylama *x, t_object *dsp64, double **ins,
         }
     }
     
-    /* since the current value of our write pointer has changed in our perform routine
+    /** since the current value of our write pointer has changed in our perform routine
      it must be copied back to the object structure.
      */
     x->write_ptr = write_ptr;

@@ -1,21 +1,23 @@
 //
 //  Header.h
 //  max-external
-//
-//  Created by Tom     Berkmann 375851,
-//  Olivier Faure  Brac 382122,
-//  Hamed   Habibi Fard  385540, on 10/26/18.
-//
+/**
+ *  @author Tom     Berkmann    375851, <br>
+ *  @author Olivier Faure  Brac 382122, <br>
+ *  @author Hamed   Habibi Fard 385540, <br>
+ *  @date   10/26/18. <br>
+ *  @brief all the function declarations put together into one header file <br>
+*/
 
 #ifndef Header_h
 #define Header_h
 
-#include "ext.h"  // must be included first
+#include "ext.h"  /**< must be included first */
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include "mystruct.h"
 
-/* Function prototypes */
+/** Function prototypes */
 void *delaylama_new(t_symbol *s, short argc, t_atom *argv);
 
 void delaylama_free(t_delaylama *x);

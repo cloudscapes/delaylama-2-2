@@ -1,13 +1,21 @@
 //
 //  delaylama_assist.c
 //  max-external
-//
-//  Created by Tom     Berkmann 375851,
-//  Olivier Faure  Brac 382122,
-//  Hamed   Habibi Fard  385540, on 10/26/18.
-//
 
-#include "ext.h"  // must be included first
+/**
+ *  @author Tom     Berkmann    375851,<br>
+ *  @author Olivier Faure  Brac 382122,<br>
+ *  @author Hamed   Habibi Fard 385540,<br>
+ *  @date   10/26/18.<br>
+ *  @brief  The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown <br>
+ *  @param  x
+ *  @param  b
+ *  @param  msg
+ *  @param  arg Determines the inlet number
+ *  @param  dst
+ */
+
+#include "ext.h"  /** must be included first */
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include <stdio.h>
@@ -15,16 +23,16 @@
 #include "delaylama_class.h"
 #include "delaylama_utility.h"
 
-/* The assist method */
-/* this method is for the purpose of showing some information to user when he/she goes with
- the mouse over the inlets/outles
+
+/** this method is for the purpose of showing some information to user when he/she goes with
+    the mouse over the inlets/outles
  */
 
 void delaylama_assist(t_delaylama *x, void *b, long msg, long arg, char *dst)
 {
     
     if (msg == ASSIST_INLET) {
-        /* the inlet number is determined with the arg variable*/
+        /** the inlet number is determined with the arg variable */
         switch (arg) {
             case 0: sprintf(dst,"(signal) Input");
                 break;
@@ -34,7 +42,7 @@ void delaylama_assist(t_delaylama *x, void *b, long msg, long arg, char *dst)
                 break;
         }
     } else if (msg == ASSIST_OUTLET) {
-        /* since we have only one outlet no switching is required */
+        /** since we have only one outlet no switching is required */
         sprintf(dst,"(signal) Output");
     }
 }
