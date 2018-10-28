@@ -1,7 +1,7 @@
 //
 //  delaylama_float.c
 //  max-external
-//
+
 /**
  *  @author Tom     Berkmann    375851,<br>
  *  @author Olivier Faure  Brac 382122,<br>
@@ -23,7 +23,7 @@
 
 
 
-
+// The float method, decides what to do if the second and third inlet recieve float messages
 void delaylama_float(t_delaylama *x, double f)
 {
     // we don't care about the first inlet(from left) cause it's recieving only signals */

@@ -1,13 +1,15 @@
 //
 //  delaylama_perform64.c
 //  max-external
-//
 /**
  *  @author Tom     Berkmann    375851,<br>
  *  @author Olivier Faure  Brac 382122,<br>
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  The Performance Routine, works only with MAX/MSP 6 and 7 <br>
+ */
+
+/**
  *  @param x      pointer to our object         <br>
  *  @param dsp64           <br>
  *  @param ins   our input signal          <br>
@@ -17,6 +19,8 @@
  *  @param n               <br>
  *  @param flags           <br>
  *  @param userparam       <br>
+ */
+/**
  *  @var   input           <br>
  *  @var   delaytime    delay time   <br>
  *  @var   feedback     our feedback factor    <br>
@@ -40,7 +44,7 @@
  *  @var   feedback_sample            <br>
  */
 
-#include "ext.h"  /** must be included first */
+#include "ext.h"  // must be included first
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include <stdio.h>
