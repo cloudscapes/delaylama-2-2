@@ -77,16 +77,26 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#a0e2de3f522ab5bcb36296543c7d9d97b">delaylama_new</a> (t_symbol *s, short argc, t_atom *argv)</td></tr>
+<tr class="memdesc:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">all the function declarations put together into one header file <br />
+  <a href="#a0e2de3f522ab5bcb36296543c7d9d97b">More...</a><br /></td></tr>
 <tr class="separator:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1dcc6ec53499a0cee3a283ae808b6c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#ae1dcc6ec53499a0cee3a283ae808b6c5">delaylama_free</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x)</td></tr>
+<tr class="memdesc:ae1dcc6ec53499a0cee3a283ae808b6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a delaylama obkject <br />
+  <a href="#ae1dcc6ec53499a0cee3a283ae808b6c5">More...</a><br /></td></tr>
 <tr class="separator:ae1dcc6ec53499a0cee3a283ae808b6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#a3b4e62d5f78baba5bbf95f7bc27adf97">delaylama_float</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, double f)</td></tr>
+<tr class="memdesc:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The float method, decides what to do if the second and third inlet recieve float messages <br />
+  <a href="#a3b4e62d5f78baba5bbf95f7bc27adf97">More...</a><br /></td></tr>
 <tr class="separator:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7374225f3c49a921170dd9f9cbc86dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#a7374225f3c49a921170dd9f9cbc86dfc">delaylama_assist</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, void *b, long msg, long arg, char *dst)</td></tr>
+<tr class="memdesc:a7374225f3c49a921170dd9f9cbc86dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown <br />
+  <a href="#a7374225f3c49a921170dd9f9cbc86dfc">More...</a><br /></td></tr>
 <tr class="separator:a7374225f3c49a921170dd9f9cbc86dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c1ed473e53e0012fdbba4781012272c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#a8c1ed473e53e0012fdbba4781012272c">delaylama_perform64</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long n, long flags, void *userparam)</td></tr>
 <tr class="separator:a8c1ed473e53e0012fdbba4781012272c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66e99701d43b0f208caf22178d7585a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__utility_8h.html#a66e99701d43b0f208caf22178d7585a1">delaylama_dsp64</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, t_object *dsp64, short *count, double sr, long n, long flags)</td></tr>
+<tr class="memdesc:a66e99701d43b0f208caf22178d7585a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 64 bit DSP method, works only with MAX/MSP 6 &amp; 7 <br />
+  <a href="#a66e99701d43b0f208caf22178d7585a1">More...</a><br /></td></tr>
 <tr class="separator:a66e99701d43b0f208caf22178d7585a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -133,6 +143,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">msg</td><td></td></tr>
+    <tr><td class="paramname">arg</td><td>Determines the inlet number </td></tr>
+    <tr><td class="paramname">dstmust</td><td>be included first this method is for the purpose of showing some information to user when he/she goes with the mouse over the inlets/outles </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>the inlet number is determined with the arg variable <br />
+ since we have only one outlet no switching is required </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__assist_8c_source.html#l00031">31</a> of file <a class="el" href="delaylama__assist_8c_source.html">delaylama_assist.c</a>.</p>
 
 </div>
 </div>
@@ -186,6 +223,49 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The 64 bit DSP method, works only with MAX/MSP 6 &amp; 7 <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ </dd></dl>
+<p>In case for whatever reason the sampling rate is zero, just exit! <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+<p>Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not</p>
+<p>If the user changes the sampling rate the delayline has to be set again <br />
+<br />
+<br />
+<br />
+</p>
+<p><br />
+<br />
+<br />
+<br />
+ new memory block allocation, if the delayline pointer is set to NULL . <br />
+ sysmem_newptrclear() returns the memory with all of its values set to zero.</p>
+<p><br />
+<br />
+<br />
+else,the existing memory block gets resized. <br />
+ sysmem_resizeptrclear() sets all of the returned memory locations to zero.</p>
+<p><br />
+<br />
+if the delay line is still Null just let the user know that there was a problem with reallocating memory</p>
+<p>Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.</p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__dsp64_8c_source.html#l00023">23</a> of file <a class="el" href="delaylama__dsp64_8c_source.html">delaylama_dsp64.c</a>.</p>
+
 </div>
 </div>
 <a id="a3b4e62d5f78baba5bbf95f7bc27adf97"></a>
@@ -214,6 +294,32 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The float method, decides what to do if the second and third inlet recieve float messages <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+must be included first </dd></dl>
+<p>we don't care about the first inlet(from left) cause it's recieving only signals <br />
+<br />
+<br />
+<br />
+ If the float came into the second inlet it is delay time <br />
+<br />
+<br />
+ convert to seconds <br />
+<br />
+ convert to samples <br />
+ If the float came into the third inlet it is feedback factor </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__float_8c_source.html#l00024">24</a> of file <a class="el" href="delaylama__float_8c_source.html">delaylama_float.c</a>.</p>
+
 </div>
 </div>
 <a id="ae1dcc6ec53499a0cee3a283ae808b6c5"></a>
@@ -231,6 +337,27 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Frees a delaylama obkject <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__free_8c_source.html#l00024">24</a> of file <a class="el" href="delaylama__free_8c_source.html">delaylama_free.c</a>.</p>
 
 </div>
 </div>
@@ -265,6 +392,70 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>all the function declarations put together into one header file <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851, <br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122, <br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540, <br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18. <br />
+&lt; must be included first Function prototypes</dd></dl>
+<p>all the function declarations put together into one header file <br />
+</p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ The arguments to this function are used to pass user_supplied parameters </dd></dl>
+<p>setting some parameters to default values in case the user inputs invalid numbers <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ Instantiate a new delaylama~ object <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ creating 3 inlets <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ creating 1 outlet <br />
+<br />
+<br />
+<br />
+<br />
+ Read user parameters from the object box <br />
+<br />
+<br />
+<br />
+ some sanity checking in case the user enters some invalid numbers! <br />
+<br />
+<br />
+ our delay time shouldn't be longer than the maximum delay time or less and zero! <br />
+<br />
+ setting our delay time to a default(here 1ms) <br />
+ by setting the sampling rate to zero we force it to be invoked in our DSP method </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__new_8c_source.html#l00025">25</a> of file <a class="el" href="delaylama__new_8c_source.html">delaylama_new.c</a>.</p>
 
 </div>
 </div>
@@ -335,6 +526,162 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>must be included first </p>
+<p>first inlet from left is our signal input <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ second inlet from left is our delay time <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ third inlet from left is our feedback factor <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ our external has only one ouptput <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ assigning the needed variables from the object structure into local variables cause it's more efficient to use local variables rather than pull them off of the object structure every single time they are needed!</p>
+<p>the address of the beginning of the delay line plus the number of samples in the the delay line multiplied by the size of float.So end_of_memory will point to one slot beyond the last float in the delay line memory</p>
+<p>fractional difference used for our simple linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ samp1 &amp; samp2 are used for linear interpolation and are taken from our delay line <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+From here on we choose the correct DSP configuration based on which inlets are connected and which of them aren't.</p>
+<p>Our delay time and feedback inlets accept both floats and signals</p>
+<p>the logic of the chosen decision tree is as follows:</p>
+<p>if (both delay_time and feedback are connected){...}</p>
+<p>else if (delay_time is connected){...}</p>
+<p>else if( feedback is connected){...}</p>
+<p>else {...}</p>
+<p>By truncating the actual delay time and subtract the truncated delay time from the actual delay time we get a fraction. We can use this fraction to determine the relative contribution of two samples, the first one at the truncated delay time slot and the second sample will be taken one slot beyond the first delay time slot. But why linear interpolation? well consider the case that we have a delay time of 69 ms. Converting milliseconds to samples we get 69 * 44100 / 1000 = 3042.9 samples! we can store this sample at delay 3042 or 3043 but not between these two points! so using linear interpolation instead of just rounding gives us a smoother transition. also note that one of the most basic and simplest forms of linear interpolation has been implemented here.</p>
+<p>here the first sample is taken for linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ here the second sample is taken for our linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ here the input sample plus feedback is written to the current write location on the delay line</p>
+<p>the output sample is written to the output signal vector &amp; the write pointer is incremented</p>
+<p>while there's still some input coming <br />
+<br />
+<br />
+<br />
+<br />
+ if the fractional_differenceal delay is less than zero, set it to a default <br />
+<br />
+<br />
+<br />
+ if the fractional delay goes over the range, bring it back! <br />
+<br />
+<br />
+ here the first sample is taken for linear interpolation <br />
+<br />
+ here the second sample is taken for our linear interpolation <br />
+ since the current value of our write pointer has changed in our perform routine it must be copied back to the object structure.</p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__perform64_8c_source.html#l00054">54</a> of file <a class="el" href="delaylama__perform64_8c_source.html">delaylama_perform64.c</a>.</p>
 
 </div>
 </div>

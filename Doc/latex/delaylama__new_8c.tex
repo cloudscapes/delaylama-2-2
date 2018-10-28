@@ -11,7 +11,8 @@
 \begin{DoxyCompactItemize}
 \item 
 void $\ast$ \mbox{\hyperlink{delaylama__new_8c_a0e2de3f522ab5bcb36296543c7d9d97b}{delaylama\+\_\+new}} (t\+\_\+symbol $\ast$s, short argc, t\+\_\+atom $\ast$argv)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The new instance routine ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -20,4 +21,66 @@ void $\ast$ \mbox{\hyperlink{delaylama__new_8c_a0e2de3f522ab5bcb36296543c7d9d97b
 \index{delaylama\+\_\+new@{delaylama\+\_\+new}!delaylama\+\_\+new.\+c@{delaylama\+\_\+new.\+c}}
 \subsubsection{\texorpdfstring{delaylama\+\_\+new()}{delaylama\_new()}}
 {\footnotesize\ttfamily void$\ast$ delaylama\+\_\+new (\begin{DoxyParamCaption}\item[{t\+\_\+symbol $\ast$}]{s,  }\item[{short}]{argc,  }\item[{t\+\_\+atom $\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+The new instance routine ~\newline
+ 
+
+all the function declarations put together into one header file ~\newline
+
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ The arguments to this function are used to pass user\+\_\+supplied parameters 
+\end{DoxyDate}
+setting some parameters to default values in case the user inputs invalid numbers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Instantiate a new delaylama$\sim$ object ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ creating 3 inlets ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ creating 1 outlet ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Read user parameters from the object box ~\newline
+~\newline
+~\newline
+~\newline
+ some sanity checking in case the user enters some invalid numbers! ~\newline
+~\newline
+~\newline
+ our delay time shouldn\textquotesingle{}t be longer than the maximum delay time or less and zero! ~\newline
+~\newline
+ setting our delay time to a default(here 1ms) ~\newline
+ by setting the sampling rate to zero we force it to be invoked in our D\+SP method 
+
+Definition at line 25 of file delaylama\+\_\+new.\+c.
 

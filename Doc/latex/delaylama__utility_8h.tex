@@ -8,17 +8,22 @@
 \begin{DoxyCompactItemize}
 \item 
 void $\ast$ \mbox{\hyperlink{delaylama__utility_8h_a0e2de3f522ab5bcb36296543c7d9d97b}{delaylama\+\_\+new}} (t\+\_\+symbol $\ast$s, short argc, t\+\_\+atom $\ast$argv)
-\item 
+\begin{DoxyCompactList}\small\item\em all the function declarations put together into one header file ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_ae1dcc6ec53499a0cee3a283ae808b6c5}{delaylama\+\_\+free}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x)
-\item 
+\begin{DoxyCompactList}\small\item\em Frees a delaylama obkject ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}{delaylama\+\_\+float}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, double f)
-\item 
+\begin{DoxyCompactList}\small\item\em The float method, decides what to do if the second and third inlet recieve float messages ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_a7374225f3c49a921170dd9f9cbc86dfc}{delaylama\+\_\+assist}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, void $\ast$b, long msg, long arg, char $\ast$dst)
-\item 
+\begin{DoxyCompactList}\small\item\em The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_a8c1ed473e53e0012fdbba4781012272c}{delaylama\+\_\+perform64}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, t\+\_\+object $\ast$dsp64, double $\ast$$\ast$ins, long numins, double $\ast$$\ast$outs, long numouts, long n, long flags, void $\ast$userparam)
 \item 
 void \mbox{\hyperlink{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}{delaylama\+\_\+dsp64}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, t\+\_\+object $\ast$dsp64, short $\ast$count, double sr, long n, long flags)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The 64 bit D\+SP method, works only with M\+A\+X/\+M\+SP 6 \& 7 ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -28,11 +33,104 @@ void \mbox{\hyperlink{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}{d
 \subsubsection{\texorpdfstring{delaylama\+\_\+assist()}{delaylama\_assist()}}
 {\footnotesize\ttfamily void delaylama\+\_\+assist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{void $\ast$}]{b,  }\item[{long}]{msg,  }\item[{long}]{arg,  }\item[{char $\ast$}]{dst }\end{DoxyParamCaption})}
 
+
+
+The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em b} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em arg} & Determines the inlet number \\
+\hline
+{\em dstmust} & be included first this method is for the purpose of showing some information to user when he/she goes with the mouse over the inlets/outles \\
+\hline
+\end{DoxyParams}
+the inlet number is determined with the arg variable ~\newline
+ since we have only one outlet no switching is required 
+
+Definition at line 31 of file delaylama\+\_\+assist.\+c.
+
 \mbox{\Hypertarget{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}\label{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+dsp64@{delaylama\+\_\+dsp64}}
 \index{delaylama\+\_\+dsp64@{delaylama\+\_\+dsp64}!delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}}
 \subsubsection{\texorpdfstring{delaylama\+\_\+dsp64()}{delaylama\_dsp64()}}
 {\footnotesize\ttfamily void delaylama\+\_\+dsp64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{t\+\_\+object $\ast$}]{dsp64,  }\item[{short $\ast$}]{count,  }\item[{double}]{sr,  }\item[{long}]{n,  }\item[{long}]{flags }\end{DoxyParamCaption})}
+
+
+
+The 64 bit D\+SP method, works only with M\+A\+X/\+M\+SP 6 \& 7 ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ 
+\end{DoxyDate}
+In case for whatever reason the sampling rate is zero, just exit! ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+
+Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not
+
+If the user changes the sampling rate the delayline has to be set again ~\newline
+~\newline
+~\newline
+~\newline
+
+
+~\newline
+~\newline
+~\newline
+~\newline
+ new memory block allocation, if the delayline pointer is set to N\+U\+LL . ~\newline
+ sysmem\+\_\+newptrclear() returns the memory with all of its values set to zero.
+
+~\newline
+~\newline
+~\newline
+else,the existing memory block gets resized. ~\newline
+ sysmem\+\_\+resizeptrclear() sets all of the returned memory locations to zero.
+
+~\newline
+~\newline
+if the delay line is still Null just let the user know that there was a problem with reallocating memory
+
+Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.
+
+Definition at line 23 of file delaylama\+\_\+dsp64.\+c.
 
 \mbox{\Hypertarget{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}\label{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+float@{delaylama\+\_\+float}}
@@ -40,11 +138,72 @@ void \mbox{\hyperlink{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}{d
 \subsubsection{\texorpdfstring{delaylama\+\_\+float()}{delaylama\_float()}}
 {\footnotesize\ttfamily void delaylama\+\_\+float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{double}]{f }\end{DoxyParamCaption})}
 
+
+
+The float method, decides what to do if the second and third inlet recieve float messages ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+must be included first 
+\end{DoxyDate}
+we don\textquotesingle{}t care about the first inlet(from left) cause it\textquotesingle{}s recieving only signals ~\newline
+~\newline
+~\newline
+~\newline
+ If the float came into the second inlet it is delay time ~\newline
+~\newline
+~\newline
+ convert to seconds ~\newline
+~\newline
+ convert to samples ~\newline
+ If the float came into the third inlet it is feedback factor 
+
+Definition at line 24 of file delaylama\+\_\+float.\+c.
+
 \mbox{\Hypertarget{delaylama__utility_8h_ae1dcc6ec53499a0cee3a283ae808b6c5}\label{delaylama__utility_8h_ae1dcc6ec53499a0cee3a283ae808b6c5}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+free@{delaylama\+\_\+free}}
 \index{delaylama\+\_\+free@{delaylama\+\_\+free}!delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}}
 \subsubsection{\texorpdfstring{delaylama\+\_\+free()}{delaylama\_free()}}
 {\footnotesize\ttfamily void delaylama\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x }\end{DoxyParamCaption})}
+
+
+
+Frees a delaylama obkject ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file delaylama\+\_\+free.\+c.
 
 \mbox{\Hypertarget{delaylama__utility_8h_a0e2de3f522ab5bcb36296543c7d9d97b}\label{delaylama__utility_8h_a0e2de3f522ab5bcb36296543c7d9d97b}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+new@{delaylama\+\_\+new}}
@@ -52,9 +211,254 @@ void \mbox{\hyperlink{delaylama__utility_8h_a66e99701d43b0f208caf22178d7585a1}{d
 \subsubsection{\texorpdfstring{delaylama\+\_\+new()}{delaylama\_new()}}
 {\footnotesize\ttfamily void$\ast$ delaylama\+\_\+new (\begin{DoxyParamCaption}\item[{t\+\_\+symbol $\ast$}]{s,  }\item[{short}]{argc,  }\item[{t\+\_\+atom $\ast$}]{argv }\end{DoxyParamCaption})}
 
+
+
+all the function declarations put together into one header file ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851, ~\newline
+ 
+
+Olivier Faure Brac 382122, ~\newline
+ 
+
+Hamed Habibi Fard 385540, ~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18. ~\newline
+$<$ must be included first Function prototypes
+\end{DoxyDate}
+all the function declarations put together into one header file ~\newline
+
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ The arguments to this function are used to pass user\+\_\+supplied parameters 
+\end{DoxyDate}
+setting some parameters to default values in case the user inputs invalid numbers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Instantiate a new delaylama$\sim$ object ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ creating 3 inlets ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ creating 1 outlet ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Read user parameters from the object box ~\newline
+~\newline
+~\newline
+~\newline
+ some sanity checking in case the user enters some invalid numbers! ~\newline
+~\newline
+~\newline
+ our delay time shouldn\textquotesingle{}t be longer than the maximum delay time or less and zero! ~\newline
+~\newline
+ setting our delay time to a default(here 1ms) ~\newline
+ by setting the sampling rate to zero we force it to be invoked in our D\+SP method 
+
+Definition at line 25 of file delaylama\+\_\+new.\+c.
+
 \mbox{\Hypertarget{delaylama__utility_8h_a8c1ed473e53e0012fdbba4781012272c}\label{delaylama__utility_8h_a8c1ed473e53e0012fdbba4781012272c}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+perform64@{delaylama\+\_\+perform64}}
 \index{delaylama\+\_\+perform64@{delaylama\+\_\+perform64}!delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}}
 \subsubsection{\texorpdfstring{delaylama\+\_\+perform64()}{delaylama\_perform64()}}
 {\footnotesize\ttfamily void delaylama\+\_\+perform64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{t\+\_\+object $\ast$}]{dsp64,  }\item[{double $\ast$$\ast$}]{ins,  }\item[{long}]{numins,  }\item[{double $\ast$$\ast$}]{outs,  }\item[{long}]{numouts,  }\item[{long}]{n,  }\item[{long}]{flags,  }\item[{void $\ast$}]{userparam }\end{DoxyParamCaption})}
+
+must be included first first inlet from left is our signal input ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ second inlet from left is our delay time ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ third inlet from left is our feedback factor ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ our external has only one ouptput ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ assigning the needed variables from the object structure into local variables cause it\textquotesingle{}s more efficient to use local variables rather than pull them off of the object structure every single time they are needed!
+
+the address of the beginning of the delay line plus the number of samples in the the delay line multiplied by the size of float.\+So end\+\_\+of\+\_\+memory will point to one slot beyond the last float in the delay line memory
+
+fractional difference used for our simple linear interpolation ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ samp1 \& samp2 are used for linear interpolation and are taken from our delay line ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+From here on we choose the correct D\+SP configuration based on which inlets are connected and which of them aren\textquotesingle{}t.
+
+Our delay time and feedback inlets accept both floats and signals
+
+the logic of the chosen decision tree is as follows\+:
+
+if (both delay\+\_\+time and feedback are connected)\{...\}
+
+else if (delay\+\_\+time is connected)\{...\}
+
+else if( feedback is connected)\{...\}
+
+else \{...\}
+
+By truncating the actual delay time and subtract the truncated delay time from the actual delay time we get a fraction. We can use this fraction to determine the relative contribution of two samples, the first one at the truncated delay time slot and the second sample will be taken one slot beyond the first delay time slot. But why linear interpolation? well consider the case that we have a delay time of 69 ms. Converting milliseconds to samples we get 69 $\ast$ 44100 / 1000 = 3042.\+9 samples! we can store this sample at delay 3042 or 3043 but not between these two points! so using linear interpolation instead of just rounding gives us a smoother transition. also note that one of the most basic and simplest forms of linear interpolation has been implemented here.
+
+here the first sample is taken for linear interpolation ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ here the second sample is taken for our linear interpolation ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ here the input sample plus feedback is written to the current write location on the delay line
+
+the output sample is written to the output signal vector \& the write pointer is incremented
+
+while there\textquotesingle{}s still some input coming ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ if the fractional\+\_\+differenceal delay is less than zero, set it to a default ~\newline
+~\newline
+~\newline
+~\newline
+ if the fractional delay goes over the range, bring it back! ~\newline
+~\newline
+~\newline
+ here the first sample is taken for linear interpolation ~\newline
+~\newline
+ here the second sample is taken for our linear interpolation ~\newline
+ since the current value of our write pointer has changed in our perform routine it must be copied back to the object structure.
+
+Definition at line 54 of file delaylama\+\_\+perform64.\+c.
 

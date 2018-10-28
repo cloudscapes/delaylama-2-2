@@ -74,10 +74,14 @@ $(function() {
 <code>#include &quot;<a class="el" href="mystruct_8h_source.html">mystruct.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__class_8h_source.html">delaylama_class.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__utility_8h_source.html">delaylama_utility.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="delaylama__new_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__new_8c.html#a0e2de3f522ab5bcb36296543c7d9d97b">delaylama_new</a> (t_symbol *s, short argc, t_atom *argv)</td></tr>
+<tr class="memdesc:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The new instance routine <br />
+  <a href="#a0e2de3f522ab5bcb36296543c7d9d97b">More...</a><br /></td></tr>
 <tr class="separator:a0e2de3f522ab5bcb36296543c7d9d97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -112,6 +116,60 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The new instance routine <br />
+ </p>
+<p>all the function declarations put together into one header file <br />
+</p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ The arguments to this function are used to pass user_supplied parameters </dd></dl>
+<p>setting some parameters to default values in case the user inputs invalid numbers <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ Instantiate a new delaylama~ object <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ creating 3 inlets <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ creating 1 outlet <br />
+<br />
+<br />
+<br />
+<br />
+ Read user parameters from the object box <br />
+<br />
+<br />
+<br />
+ some sanity checking in case the user enters some invalid numbers! <br />
+<br />
+<br />
+ our delay time shouldn't be longer than the maximum delay time or less and zero! <br />
+<br />
+ setting our delay time to a default(here 1ms) <br />
+ by setting the sampling rate to zero we force it to be invoked in our DSP method </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__new_8c_source.html#l00025">25</a> of file <a class="el" href="delaylama__new_8c_source.html">delaylama_new.c</a>.</p>
 
 </div>
 </div>

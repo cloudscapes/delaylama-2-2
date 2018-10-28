@@ -74,10 +74,14 @@ $(function() {
 <code>#include &quot;<a class="el" href="mystruct_8h_source.html">mystruct.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__class_8h_source.html">delaylama_class.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__utility_8h_source.html">delaylama_utility.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="delaylama__assist_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7374225f3c49a921170dd9f9cbc86dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__assist_8c.html#a7374225f3c49a921170dd9f9cbc86dfc">delaylama_assist</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, void *b, long msg, long arg, char *dst)</td></tr>
+<tr class="memdesc:a7374225f3c49a921170dd9f9cbc86dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown <br />
+  <a href="#a7374225f3c49a921170dd9f9cbc86dfc">More...</a><br /></td></tr>
 <tr class="separator:a7374225f3c49a921170dd9f9cbc86dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -124,6 +128,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The Assist Method, hover the mouse cursor over the inlet/outlet and a message will be shown <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+ </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">msg</td><td></td></tr>
+    <tr><td class="paramname">arg</td><td>Determines the inlet number </td></tr>
+    <tr><td class="paramname">dstmust</td><td>be included first this method is for the purpose of showing some information to user when he/she goes with the mouse over the inlets/outles </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>the inlet number is determined with the arg variable <br />
+ since we have only one outlet no switching is required </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__assist_8c_source.html#l00031">31</a> of file <a class="el" href="delaylama__assist_8c_source.html">delaylama_assist.c</a>.</p>
 
 </div>
 </div>

@@ -74,10 +74,14 @@ $(function() {
 <code>#include &quot;<a class="el" href="mystruct_8h_source.html">mystruct.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__class_8h_source.html">delaylama_class.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__utility_8h_source.html">delaylama_utility.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="delaylama__float_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__float_8c.html#a3b4e62d5f78baba5bbf95f7bc27adf97">delaylama_float</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, double f)</td></tr>
+<tr class="memdesc:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The float method, decides what to do if the second and third inlet recieve float messages <br />
+  <a href="#a3b4e62d5f78baba5bbf95f7bc27adf97">More...</a><br /></td></tr>
 <tr class="separator:a3b4e62d5f78baba5bbf95f7bc27adf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -106,6 +110,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The float method, decides what to do if the second and third inlet recieve float messages <br />
+ </p>
+<dl class="section author"><dt>Author</dt><dd>Tom Berkmann 375851,<br />
+ </dd>
+<dd>
+Olivier Faure Brac 382122,<br />
+ </dd>
+<dd>
+Hamed Habibi Fard 385540,<br />
+ </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
+must be included first </dd></dl>
+<p>we don't care about the first inlet(from left) cause it's recieving only signals <br />
+<br />
+<br />
+<br />
+ If the float came into the second inlet it is delay time <br />
+<br />
+<br />
+ convert to seconds <br />
+<br />
+ convert to samples <br />
+ If the float came into the third inlet it is feedback factor </p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__float_8c_source.html#l00024">24</a> of file <a class="el" href="delaylama__float_8c_source.html">delaylama_float.c</a>.</p>
 
 </div>
 </div>

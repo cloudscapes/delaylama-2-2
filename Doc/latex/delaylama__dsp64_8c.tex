@@ -11,7 +11,8 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{delaylama__dsp64_8c_a66e99701d43b0f208caf22178d7585a1}{delaylama\+\_\+dsp64}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, t\+\_\+object $\ast$dsp64, short $\ast$count, double sr, long n, long flags)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The 64 bit D\+SP method, works only with M\+A\+X/\+M\+SP 6 \& 7 ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -20,4 +21,60 @@ void \mbox{\hyperlink{delaylama__dsp64_8c_a66e99701d43b0f208caf22178d7585a1}{del
 \index{delaylama\+\_\+dsp64@{delaylama\+\_\+dsp64}!delaylama\+\_\+dsp64.\+c@{delaylama\+\_\+dsp64.\+c}}
 \subsubsection{\texorpdfstring{delaylama\+\_\+dsp64()}{delaylama\_dsp64()}}
 {\footnotesize\ttfamily void delaylama\+\_\+dsp64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{t\+\_\+object $\ast$}]{dsp64,  }\item[{short $\ast$}]{count,  }\item[{double}]{sr,  }\item[{long}]{n,  }\item[{long}]{flags }\end{DoxyParamCaption})}
+
+
+
+The 64 bit D\+SP method, works only with M\+A\+X/\+M\+SP 6 \& 7 ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+Tom Berkmann 375851,~\newline
+ 
+
+Olivier Faure Brac 382122,~\newline
+ 
+
+Hamed Habibi Fard 385540,~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/26/18.~\newline
+ 
+\end{DoxyDate}
+In case for whatever reason the sampling rate is zero, just exit! ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+
+Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not
+
+If the user changes the sampling rate the delayline has to be set again ~\newline
+~\newline
+~\newline
+~\newline
+
+
+~\newline
+~\newline
+~\newline
+~\newline
+ new memory block allocation, if the delayline pointer is set to N\+U\+LL . ~\newline
+ sysmem\+\_\+newptrclear() returns the memory with all of its values set to zero.
+
+~\newline
+~\newline
+~\newline
+else,the existing memory block gets resized. ~\newline
+ sysmem\+\_\+resizeptrclear() sets all of the returned memory locations to zero.
+
+~\newline
+~\newline
+if the delay line is still Null just let the user know that there was a problem with reallocating memory
+
+Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.
+
+Definition at line 23 of file delaylama\+\_\+dsp64.\+c.
 

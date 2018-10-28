@@ -8,6 +8,9 @@
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  The float method, decides what to do if the second and third inlet recieve float messages <br>
+ *  @param  x
+ *  @param  f
+ *  @var    inlet
  */
 
 #include "ext.h"  /** must be included first */

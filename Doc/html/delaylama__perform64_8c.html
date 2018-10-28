@@ -74,7 +74,9 @@ $(function() {
 <code>#include &quot;<a class="el" href="mystruct_8h_source.html">mystruct.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__class_8h_source.html">delaylama_class.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="delaylama__utility_8h_source.html">delaylama_utility.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="delaylama__perform64_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8c1ed473e53e0012fdbba4781012272c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="delaylama__perform64_8c.html#a8c1ed473e53e0012fdbba4781012272c">delaylama_perform64</a> (<a class="el" href="mystruct_8h.html#a09e38f4acb98a28fd6cd51b197468ab1">t_delaylama</a> *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long n, long flags, void *userparam)</td></tr>
@@ -148,6 +150,162 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>must be included first </p>
+<p>first inlet from left is our signal input <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ second inlet from left is our delay time <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ third inlet from left is our feedback factor <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ our external has only one ouptput <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ assigning the needed variables from the object structure into local variables cause it's more efficient to use local variables rather than pull them off of the object structure every single time they are needed!</p>
+<p>the address of the beginning of the delay line plus the number of samples in the the delay line multiplied by the size of float.So end_of_memory will point to one slot beyond the last float in the delay line memory</p>
+<p>fractional difference used for our simple linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ samp1 &amp; samp2 are used for linear interpolation and are taken from our delay line <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+From here on we choose the correct DSP configuration based on which inlets are connected and which of them aren't.</p>
+<p>Our delay time and feedback inlets accept both floats and signals</p>
+<p>the logic of the chosen decision tree is as follows:</p>
+<p>if (both delay_time and feedback are connected){...}</p>
+<p>else if (delay_time is connected){...}</p>
+<p>else if( feedback is connected){...}</p>
+<p>else {...}</p>
+<p>By truncating the actual delay time and subtract the truncated delay time from the actual delay time we get a fraction. We can use this fraction to determine the relative contribution of two samples, the first one at the truncated delay time slot and the second sample will be taken one slot beyond the first delay time slot. But why linear interpolation? well consider the case that we have a delay time of 69 ms. Converting milliseconds to samples we get 69 * 44100 / 1000 = 3042.9 samples! we can store this sample at delay 3042 or 3043 but not between these two points! so using linear interpolation instead of just rounding gives us a smoother transition. also note that one of the most basic and simplest forms of linear interpolation has been implemented here.</p>
+<p>here the first sample is taken for linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ here the second sample is taken for our linear interpolation <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+ here the input sample plus feedback is written to the current write location on the delay line</p>
+<p>the output sample is written to the output signal vector &amp; the write pointer is incremented</p>
+<p>while there's still some input coming <br />
+<br />
+<br />
+<br />
+<br />
+ if the fractional_differenceal delay is less than zero, set it to a default <br />
+<br />
+<br />
+<br />
+ if the fractional delay goes over the range, bring it back! <br />
+<br />
+<br />
+ here the first sample is taken for linear interpolation <br />
+<br />
+ here the second sample is taken for our linear interpolation <br />
+ since the current value of our write pointer has changed in our perform routine it must be copied back to the object structure.</p>
+
+<p class="definition">Definition at line <a class="el" href="delaylama__perform64_8c_source.html#l00054">54</a> of file <a class="el" href="delaylama__perform64_8c_source.html">delaylama_perform64.c</a>.</p>
 
 </div>
 </div>
