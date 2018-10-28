@@ -11,7 +11,7 @@ void $\ast$ \mbox{\hyperlink{delaylama__utility_8h_a0e2de3f522ab5bcb36296543c7d9
 \begin{DoxyCompactList}\small\item\em all the function declarations put together into one header file ~\newline
  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_ae1dcc6ec53499a0cee3a283ae808b6c5}{delaylama\+\_\+free}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x)
-\begin{DoxyCompactList}\small\item\em Frees a delaylama obkject ~\newline
+\begin{DoxyCompactList}\small\item\em Frees a delaylama object ~\newline
  \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}{delaylama\+\_\+float}} (\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$x, double f)
 \item 
@@ -53,19 +53,23 @@ Hamed Habibi Fard 385540,~\newline
 \end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em x} & \\
+{\em x} & ~\newline
+ \\
 \hline
-{\em b} & \\
+{\em b} & ~\newline
+ \\
 \hline
-{\em msg} & \\
+{\em msg} & ~\newline
+ \\
 \hline
-{\em arg} & Determines the inlet number \\
+{\em arg} & Determines the inlet number ~\newline
+ \\
 \hline
-{\em dstmust} & be included first this method is for the purpose of showing some information to user when he/she goes with the mouse over the inlets/outles \\
+{\em dst} & ~\newline
+this method is for the purpose of showing some information to the user when he/she goes with the mouse over the inlets/outles \\
 \hline
 \end{DoxyParams}
-the inlet number is determined with the arg variable ~\newline
- since we have only one outlet no switching is required 
+
 
 Definition at line 31 of file delaylama\+\_\+assist.\+c.
 
@@ -94,42 +98,31 @@ Hamed Habibi Fard 385540,~\newline
 10/26/18.~\newline
  
 \end{DoxyDate}
-In case for whatever reason the sampling rate is zero, just exit! ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
 
+\begin{DoxyParams}{Parameters}
+{\em x} & ~\newline
+ \\
+\hline
+{\em dsp64} & ~\newline
+ \\
+\hline
+{\em count} & ~\newline
+ \\
+\hline
+{\em sr} & ~\newline
+ \\
+\hline
+{\em n} & ~\newline
+ \\
+\hline
+{\em flags} & ~\newline
+ ~\newline
+from M\+AX S\+DK Documentation Manual\+:\\
+\hline
+\end{DoxyParams}
+The dsp64 method specifies the signal processing function your object defines along with its arguments. Your object\textquotesingle{}s dsp64 method will be called when the M\+SP signal compiler is building a sequence of operations (known as the D\+SP Chain) that will be performed on each set of audio samples. The operation sequence consists of a pointers to functions (called perform routines) followed by arguments to those functions. To add an entry to the D\+SP chain, your dsp64 method uses the \char`\"{}dsp\+\_\+add64\char`\"{} method of the D\+SP chain. The dsp\+\_\+add64 method is passed an a pointer to your object, a pointer to a perform64 routine that calculates the samples, an optional flag which may alter behavior, and a generic pointer which will be passed on to your perform routine. 
 
-Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not
-
-If the user changes the sampling rate the delayline has to be set again ~\newline
-~\newline
-~\newline
-~\newline
-
-
-~\newline
-~\newline
-~\newline
-~\newline
- new memory block allocation, if the delayline pointer is set to N\+U\+LL . ~\newline
- sysmem\+\_\+newptrclear() returns the memory with all of its values set to zero.
-
-~\newline
-~\newline
-~\newline
-else,the existing memory block gets resized. ~\newline
- sysmem\+\_\+resizeptrclear() sets all of the returned memory locations to zero.
-
-~\newline
-~\newline
-if the delay line is still Null just let the user know that there was a problem with reallocating memory
-
-Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.
-
-Definition at line 23 of file delaylama\+\_\+dsp64.\+c.
+Definition at line 37 of file delaylama\+\_\+dsp64.\+c.
 
 \mbox{\Hypertarget{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}\label{delaylama__utility_8h_a3b4e62d5f78baba5bbf95f7bc27adf97}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+float@{delaylama\+\_\+float}}
@@ -137,17 +130,7 @@ Definition at line 23 of file delaylama\+\_\+dsp64.\+c.
 \subsubsection{\texorpdfstring{delaylama\+\_\+float()}{delaylama\_float()}}
 {\footnotesize\ttfamily void delaylama\+\_\+float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{double}]{f }\end{DoxyParamCaption})}
 
-must be included first we don\textquotesingle{}t care about the first inlet(from left) cause it\textquotesingle{}s recieving only signals ~\newline
-~\newline
-~\newline
-~\newline
- If the float came into the second inlet it is delay time ~\newline
-~\newline
-~\newline
- convert to seconds ~\newline
-~\newline
- convert to samples ~\newline
- If the float came into the third inlet it is feedback factor 
+
 
 Definition at line 27 of file delaylama\+\_\+float.\+c.
 
@@ -159,7 +142,7 @@ Definition at line 27 of file delaylama\+\_\+float.\+c.
 
 
 
-Frees a delaylama obkject ~\newline
+Frees a delaylama object ~\newline
  
 
 \begin{DoxyAuthor}{Author}
@@ -178,7 +161,8 @@ Hamed Habibi Fard 385540,~\newline
 \end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em x} & \\
+{\em x} & ~\newline
+must be included first \\
 \hline
 \end{DoxyParams}
 
@@ -225,8 +209,20 @@ Hamed Habibi Fard 385540,~\newline
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 10/26/18.~\newline
- The arguments to this function are used to pass user\+\_\+supplied parameters 
+ 
 \end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & is a c string(a message selector) ~\newline
+ \\
+\hline
+{\em argc} & is the number of atoms in the argv array. ~\newline
+ \\
+\hline
+{\em argv} & is a pointer to a typed datum (an array) ~\newline
+ The arguments to this function are used to pass user\+\_\+supplied parameters \\
+\hline
+\end{DoxyParams}
 setting some parameters to default values in case the user inputs invalid numbers ~\newline
 ~\newline
 ~\newline
@@ -265,7 +261,7 @@ setting some parameters to default values in case the user inputs invalid number
  setting our delay time to a default(here 1ms) ~\newline
  by setting the sampling rate to zero we force it to be invoked in our D\+SP method 
 
-Definition at line 25 of file delaylama\+\_\+new.\+c.
+Definition at line 28 of file delaylama\+\_\+new.\+c.
 
 \mbox{\Hypertarget{delaylama__utility_8h_a8c1ed473e53e0012fdbba4781012272c}\label{delaylama__utility_8h_a8c1ed473e53e0012fdbba4781012272c}} 
 \index{delaylama\+\_\+utility.\+h@{delaylama\+\_\+utility.\+h}!delaylama\+\_\+perform64@{delaylama\+\_\+perform64}}
@@ -273,172 +269,7 @@ Definition at line 25 of file delaylama\+\_\+new.\+c.
 \subsubsection{\texorpdfstring{delaylama\+\_\+perform64()}{delaylama\_perform64()}}
 {\footnotesize\ttfamily void delaylama\+\_\+perform64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mystruct_8h_a09e38f4acb98a28fd6cd51b197468ab1}{t\+\_\+delaylama}} $\ast$}]{x,  }\item[{t\+\_\+object $\ast$}]{dsp64,  }\item[{double $\ast$$\ast$}]{ins,  }\item[{long}]{numins,  }\item[{double $\ast$$\ast$}]{outs,  }\item[{long}]{numouts,  }\item[{long}]{n,  }\item[{long}]{flags,  }\item[{void $\ast$}]{userparam }\end{DoxyParamCaption})}
 
-must be included first first inlet from left is our signal input ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- second inlet from left is our delay time ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- third inlet from left is our feedback factor ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- our external has only one ouptput ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- assigning the needed variables from the object structure into local variables cause it\textquotesingle{}s more efficient to use local variables rather than pull them off of the object structure every single time they are needed!
-
-the address of the beginning of the delay line plus the number of samples in the the delay line multiplied by the size of float.\+So end\+\_\+of\+\_\+memory will point to one slot beyond the last float in the delay line memory
-
-fractional difference used for our simple linear interpolation ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- samp1 \& samp2 are used for linear interpolation and are taken from our delay line ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-
-
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-From here on we choose the correct D\+SP configuration based on which inlets are connected and which of them aren\textquotesingle{}t.
-
-Our delay time and feedback inlets accept both floats and signals
-
-the logic of the chosen decision tree is as follows\+:
-
-if (both delay\+\_\+time and feedback are connected)\{...\}
-
-else if (delay\+\_\+time is connected)\{...\}
-
-else if( feedback is connected)\{...\}
-
-else \{...\}
-
-By truncating the actual delay time and subtract the truncated delay time from the actual delay time we get a fraction. We can use this fraction to determine the relative contribution of two samples, the first one at the truncated delay time slot and the second sample will be taken one slot beyond the first delay time slot. But why linear interpolation? well consider the case that we have a delay time of 69 ms. Converting milliseconds to samples we get 69 $\ast$ 44100 / 1000 = 3042.\+9 samples! we can store this sample at delay 3042 or 3043 but not between these two points! so using linear interpolation instead of just rounding gives us a smoother transition. also note that one of the most basic and simplest forms of linear interpolation has been implemented here.
-
-here the first sample is taken for linear interpolation ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- here the second sample is taken for our linear interpolation ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- here the input sample plus feedback is written to the current write location on the delay line
-
-the output sample is written to the output signal vector \& the write pointer is incremented
-
-while there\textquotesingle{}s still some input coming ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
- if the fractional\+\_\+differenceal delay is less than zero, set it to a default ~\newline
-~\newline
-~\newline
-~\newline
- if the fractional delay goes over the range, bring it back! ~\newline
-~\newline
-~\newline
- here the first sample is taken for linear interpolation ~\newline
-~\newline
- here the second sample is taken for our linear interpolation ~\newline
- since the current value of our write pointer has changed in our perform routine it must be copied back to the object structure.
+must be included first 
 
 Definition at line 54 of file delaylama\+\_\+perform64.\+c.
 

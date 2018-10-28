@@ -41,40 +41,29 @@ Hamed Habibi Fard 385540,~\newline
 10/26/18.~\newline
  
 \end{DoxyDate}
-In case for whatever reason the sampling rate is zero, just exit! ~\newline
-~\newline
-~\newline
-~\newline
-~\newline
-~\newline
 
+\begin{DoxyParams}{Parameters}
+{\em x} & ~\newline
+ \\
+\hline
+{\em dsp64} & ~\newline
+ \\
+\hline
+{\em count} & ~\newline
+ \\
+\hline
+{\em sr} & ~\newline
+ \\
+\hline
+{\em n} & ~\newline
+ \\
+\hline
+{\em flags} & ~\newline
+ ~\newline
+from M\+AX S\+DK Documentation Manual\+:\\
+\hline
+\end{DoxyParams}
+The dsp64 method specifies the signal processing function your object defines along with its arguments. Your object\textquotesingle{}s dsp64 method will be called when the M\+SP signal compiler is building a sequence of operations (known as the D\+SP Chain) that will be performed on each set of audio samples. The operation sequence consists of a pointers to functions (called perform routines) followed by arguments to those functions. To add an entry to the D\+SP chain, your dsp64 method uses the \char`\"{}dsp\+\_\+add64\char`\"{} method of the D\+SP chain. The dsp\+\_\+add64 method is passed an a pointer to your object, a pointer to a perform64 routine that calculates the samples, an optional flag which may alter behavior, and a generic pointer which will be passed on to your perform routine. 
 
-Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not
-
-If the user changes the sampling rate the delayline has to be set again ~\newline
-~\newline
-~\newline
-~\newline
-
-
-~\newline
-~\newline
-~\newline
-~\newline
- new memory block allocation, if the delayline pointer is set to N\+U\+LL . ~\newline
- sysmem\+\_\+newptrclear() returns the memory with all of its values set to zero.
-
-~\newline
-~\newline
-~\newline
-else,the existing memory block gets resized. ~\newline
- sysmem\+\_\+resizeptrclear() sets all of the returned memory locations to zero.
-
-~\newline
-~\newline
-if the delay line is still Null just let the user know that there was a problem with reallocating memory
-
-Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.
-
-Definition at line 23 of file delaylama\+\_\+dsp64.\+c.
+Definition at line 37 of file delaylama\+\_\+dsp64.\+c.
 

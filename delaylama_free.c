@@ -8,10 +8,10 @@
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  Frees a delaylama object <br>
- *  @param  x
+ *  @param  x                        <br>
  */
 
-#include "ext.h"  // must be included first
+#include "ext.h"  /** must be included first */
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include <stdio.h>
@@ -19,7 +19,7 @@
 #include "delaylama_class.h"
 #include "delaylama_utility.h"
 
-/* Our custom free routine */
+// Our custom free routine 
 
 void delaylama_free(t_delaylama *x)
 {

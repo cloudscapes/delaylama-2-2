@@ -13,9 +13,9 @@
  */
 
 
-/** The necessary Max/MSP header files */
+// The necessary Max/MSP header files 
 
-#include "ext.h"  /**< must be included first */
+#include "ext.h"  // must be included first
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include "delaylama_utility.h"
@@ -23,13 +23,13 @@
 
 
 
-/** The main() function */
+// The main() function
 
 void ext_main(void *r)
 {
     delaylama_class = class_new("delaylama~",(method)delaylama_new,(method)delaylama_free,sizeof(t_delaylama),0,A_GIMME,0);
     
-    /** binding our methods */
+    // binding our methods
     
     class_addmethod(delaylama_class, (method)delaylama_dsp64, "dsp64", A_CANT, 0);
     

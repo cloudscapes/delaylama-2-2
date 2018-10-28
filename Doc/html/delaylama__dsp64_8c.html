@@ -147,36 +147,27 @@ Hamed Habibi Fard 385540,<br />
  </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>10/26/18.<br />
  </dd></dl>
-<p>In case for whatever reason the sampling rate is zero, just exit! <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-</p>
-<p>Store the states of signal inlet connections if the delay time is connected or not or if our feedback is connected or not</p>
-<p>If the user changes the sampling rate the delayline has to be set again <br />
-<br />
-<br />
-<br />
-</p>
-<p><br />
-<br />
-<br />
-<br />
- new memory block allocation, if the delayline pointer is set to NULL . <br />
- sysmem_newptrclear() returns the memory with all of its values set to zero.</p>
-<p><br />
-<br />
-<br />
-else,the existing memory block gets resized. <br />
- sysmem_resizeptrclear() sets all of the returned memory locations to zero.</p>
-<p><br />
-<br />
-if the delay line is still Null just let the user know that there was a problem with reallocating memory</p>
-<p>Assign the write pointer to the beginning of the delayline whenever dynamic memory is initialized or resized.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td><br />
+ </td></tr>
+    <tr><td class="paramname">dsp64</td><td><br />
+ </td></tr>
+    <tr><td class="paramname">count</td><td><br />
+ </td></tr>
+    <tr><td class="paramname">sr</td><td><br />
+ </td></tr>
+    <tr><td class="paramname">n</td><td><br />
+ </td></tr>
+    <tr><td class="paramname">flags</td><td><br />
+ <br />
+from MAX SDK Documentation Manual:</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The dsp64 method specifies the signal processing function your object defines along with its arguments. Your object's dsp64 method will be called when the MSP signal compiler is building a sequence of operations (known as the DSP Chain) that will be performed on each set of audio samples. The operation sequence consists of a pointers to functions (called perform routines) followed by arguments to those functions. To add an entry to the DSP chain, your dsp64 method uses the "dsp_add64" method of the DSP chain. The dsp_add64 method is passed an a pointer to your object, a pointer to a perform64 routine that calculates the samples, an optional flag which may alter behavior, and a generic pointer which will be passed on to your perform routine. </p>
 
-<p class="definition">Definition at line <a class="el" href="delaylama__dsp64_8c_source.html#l00023">23</a> of file <a class="el" href="delaylama__dsp64_8c_source.html">delaylama_dsp64.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="delaylama__dsp64_8c_source.html#l00037">37</a> of file <a class="el" href="delaylama__dsp64_8c_source.html">delaylama_dsp64.c</a>.</p>
 
 </div>
 </div>

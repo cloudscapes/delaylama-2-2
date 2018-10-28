@@ -10,7 +10,7 @@
  *  @brief  The class declaration <br>
  */
 
-#include "ext.h"  /** must be included first */
+#include "ext.h"  // must be included first 
 #include "z_dsp.h"
 #include "ext_obex.h"
 #ifndef delaylama_class_h

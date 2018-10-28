@@ -8,6 +8,9 @@
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  The new instance routine  <br>
+ *  @param s  is a c string(a message selector)  <br>
+ *  @param argc   is the number of atoms in the argv array. <br>
+ *  @param argv is a pointer to a typed datum (an array) <br>
  */
 
 #include "ext.h"  // must be included first
