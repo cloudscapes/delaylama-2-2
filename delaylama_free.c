@@ -11,7 +11,7 @@
  *  @param  x                        <br>
  */
 
-#include "ext.h"  /** must be included first */
+#include "ext.h"  // must be included first 
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include <stdio.h>

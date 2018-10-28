@@ -24,9 +24,9 @@
 #include "delaylama_utility.h"
 
 
-/** this method is for the purpose of showing some information to the user when he/she goes with
-    the mouse over the inlets/outles
- */
+// this method is for the purpose of showing some information to the user when he/she goes with
+// ... the mouse over the inlets/outles
+
 
 void delaylama_assist(t_delaylama *x, void *b, long msg, long arg, char *dst)
 {

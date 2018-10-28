@@ -12,12 +12,12 @@
 #ifndef Header_h
 #define Header_h
 
-#include "ext.h"  /**< must be included first */
+#include "ext.h"  // must be included first
 #include "z_dsp.h"
 #include "ext_obex.h"
 #include "mystruct.h"
 
-/** Function prototypes */
+// Function prototypes 
 void *delaylama_new(t_symbol *s, short argc, t_atom *argv);
 
 void delaylama_free(t_delaylama *x);
