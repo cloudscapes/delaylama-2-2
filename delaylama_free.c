@@ -7,7 +7,7 @@
  *  @author Olivier Faure  Brac 382122,<br>
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
- *  @brief  Frees a delaylama obkject <br>
+ *  @brief  Frees a delaylama object <br>
  *  @param  x
  */
 

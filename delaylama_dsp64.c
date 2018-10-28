@@ -8,6 +8,12 @@
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  The 64 bit DSP method, works only with MAX/MSP 6 & 7 <br>
+ *  @param x     <br>
+ *  @param dsp64 <br>
+ *  @param count <br>
+ *  @param sr    <br>
+ *  @param n     <br>
+ * @param  flags <br>
  */
 
 #include "ext.h"  // must be included first

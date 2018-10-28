@@ -8,36 +8,36 @@
  *  @author Hamed   Habibi Fard 385540,<br>
  *  @date   10/26/18.<br>
  *  @brief  The Performance Routine, works only with MAX/MSP 6 and 7 <br>
- *  @param x
- *  @param dsp64
- *  @param ins
- *  @param numins
- *  @param outs
- *  @param numouts
- *  @param n
- *  @param flags
- *  @param userparam
- *  @var   input
- *  @var   delaytime
- *  @var   feedback
- *  @var   output
- *  @var   sr
- *  @var   delay_line
- *  @var   read_ptr
- *  @var   write_ptr
- *  @var   delay_length_as_samples
- *  @var   end_of_memory
- *  @var   delaytime_connected
- *  @var   feedback_connected
- *  @var   delaytime_float
- *  @var   fractional_difference
- *  @var   frac_delay
- *  @var   samp1
- *  @var   samp2
- *  @var   int_delay
- *  @var   samp_rate_seconds
- *  @var   output_sample
- *  @var   feedback_sample
+ *  @param x               <br>
+ *  @param dsp64           <br>
+ *  @param ins             <br>
+ *  @param numins          <br>
+ *  @param outs            <br>
+ *  @param numouts         <br>
+ *  @param n               <br>
+ *  @param flags           <br>
+ *  @param userparam       <br>
+ *  @var   input           <br>
+ *  @var   delaytime       <br>
+ *  @var   feedback        <br>
+ *  @var   output          <br>
+ *  @var   sr              <br>
+ *  @var   delay_line      <br>
+ *  @var   read_ptr        <br>
+ *  @var   write_ptr       <br>
+ *  @var   delay_length_as_samples    <br>
+ *  @var   end_of_memory              <br>
+ *  @var   delaytime_connected        <br>
+ *  @var   feedback_connected         <br>
+ *  @var   delaytime_float            <br>
+ *  @var   fractional_difference      <br>
+ *  @var   frac_delay                 <br>
+ *  @var   samp1                      <br>
+ *  @var   samp2                      <br>
+ *  @var   int_delay                  <br>
+ *  @var   samp_rate_seconds          <br>
+ *  @var   output_sample              <br>
+ *  @var   feedback_sample            <br>
  */
 
 #include "ext.h"  /** must be included first */
